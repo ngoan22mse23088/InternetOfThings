@@ -220,7 +220,7 @@ while True:
           value = readMoisture()
           print('Moisture value: ' + str(value))
           client.publish('cambien2', value)
-    counter = counter - 1
+    # counter = counter - 1
     # if counter <= 0:
     #     counter = 10
     #     temp = random.randint(10, 20)
