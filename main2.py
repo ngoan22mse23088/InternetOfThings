@@ -55,7 +55,7 @@ AIO_2 = 'cambien2'
 AIO_3 = 'cambien3'
 AIO_FEED_ID_3 = "equation"
 AIO_USERNAME = "lcngoan0607"
-AIO_KEY = "aio_dMmx257Bnf7fFenPgsVGuqo9MNcN"
+AIO_KEY = "aio_welK61mx77drUfe2Csq1XYUOSigg"
 
 def serial_read_data(ser):
     bytesToRead = ser.inWaiting()
@@ -92,7 +92,7 @@ import sys
 # Import Adafruit IO MQTT client.
 from Adafruit_IO import MQTTClient
 
-ADAFRUIT_IO_KEY = 'aio_dMmx257Bnf7fFenPgsVGuqo9MNcN'
+ADAFRUIT_IO_KEY = 'aio_welK61mx77drUfe2Csq1XYUOSigg'
 ADAFRUIT_IO_USERNAME = 'lcngoan0607'
 
 # Set to the ID of the feed to subscribe to for updates.
