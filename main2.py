@@ -60,7 +60,7 @@ AIO_2 = 'cambien2'
 AIO_3 = 'cambien3'
 AIO_FEED_ID_3 = "equation"
 AIO_USERNAME = "lcngoan0607"
-AIO_KEY = "aio_rvak35RIJgcQfgONWrPzisLreeBw"
+AIO_KEY = "aio_gpux25qmPq6ucu8emFE1XXhd3Pqx"
 
 def serial_read_data(ser):
     bytesToRead = ser.inWaiting()
@@ -100,7 +100,7 @@ from Adafruit_IO import MQTTClient
 # Set to your Adafruit IO key.
 # Remember, your key is a secret,
 # so make sure not to publish it when you publish this code!
-ADAFRUIT_IO_KEY = 'aio_rvak35RIJgcQfgONWrPzisLreeBw'
+ADAFRUIT_IO_KEY = 'aio_gpux25qmPq6ucu8emFE1XXhd3Pqx'
 
 # Set to your Adafruit IO username.
 # (go to https://accounts.adafruit.com to find your username)
