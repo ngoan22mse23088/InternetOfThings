@@ -45,7 +45,7 @@ def setDevice1(state):
 
 import sys
 
-import Adafruit_IO
+# import Adafruit_IO
 from Adafruit_IO import MQTTClient
 import time
 import random
