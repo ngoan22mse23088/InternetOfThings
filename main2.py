@@ -92,7 +92,7 @@ import sys
 # Import Adafruit IO MQTT client.
 from Adafruit_IO import MQTTClient
 
-ADAFRUIT_IO_KEY = 'aio_gpux25qmPq6ucu8emFE1XXhd3Pqx'
+ADAFRUIT_IO_KEY = 'aio_pNhq60U31XmTlNPaMfv3wev1ZGse'
 ADAFRUIT_IO_USERNAME = 'lcngoan0607'
 
 # Set to the ID of the feed to subscribe to for updates.
@@ -217,13 +217,13 @@ while True:
         counter = 10
         temp = random.randint(10, 20)
         client.publish('cambien1', temp)
-        print('cambien1: ' + str(temp))
+        # print('cambien1: ' + str(temp))
         humi = random.randint(50, 70)
         client.publish('cambien2', humi)
-        print('cambien2: ' + str(humi))
+        # print('cambien2: ' + str(humi))
         light = random.randint(100, 500)
         client.publish('cambien3', light)
-        print('cambien3: ' + str(light))
+        # print('cambien3: ' + str(light))
          
         if device1ON:
              value = readTemperature()
@@ -244,9 +244,9 @@ while True:
         # x1 = getx1()
         # x2 = getx2()
         # x3 = getx3()
-        value = init_global_equation()
-        result = modify_value(value, x1, x2, x3)
-        print('result', result)
-        client.publish('cambien3', result)
+        # value = init_global_equation()
+        # result = modify_value(value, x1, x2, x3)
+        # print('result', result)
+        # client.publish('cambien3', result)
     time.sleep(1)
     pass
