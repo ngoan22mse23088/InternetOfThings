@@ -212,27 +212,28 @@ def modify_value(init_global_equation, x1, x2, x3):
 aio = Adafruit_IO.Client(AIO_USERNAME, AIO_KEY)
 counter = 10
 while True:
+     if device1ON:
+          value = readTemperature()
+          print('Temperature value: ' + str(value))
+          client.publish('cambien1', value)
+     if device2ON:
+          value = readMoisture()
+          print('Moisture value: ' + str(value))
+          client.publish('cambien2', value)
     counter = counter - 1
-    if counter <= 0:
-        counter = 10
-        temp = random.randint(10, 20)
-        client.publish('cambien1', temp)
-        # print('cambien1: ' + str(temp))
-        humi = random.randint(50, 70)
-        client.publish('cambien2', humi)
-        # print('cambien2: ' + str(humi))
-        light = random.randint(100, 500)
-        client.publish('cambien3', light)
+    # if counter <= 0:
+    #     counter = 10
+    #     temp = random.randint(10, 20)
+    #     client.publish('cambien1', temp)
+    #     # print('cambien1: ' + str(temp))
+    #     humi = random.randint(50, 70)
+    #     client.publish('cambien2', humi)
+    #     # print('cambien2: ' + str(humi))
+    #     light = random.randint(100, 500)
+    #     client.publish('cambien3', light)
         # print('cambien3: ' + str(light))
          
-        if device1ON:
-             value = readTemperature()
-             print('Temperature value: ' + str(value))
-             client.publish('cambien1', value)
-        if device2ON:
-             value = readMoisture()
-             print('Moisture value: ' + str(value))
-             client.publish('cambien2', value)
+        
          
         # x1 = random.randint(0, 10)
         # client.publish('cambien1', x1)
