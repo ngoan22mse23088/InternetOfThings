@@ -4,10 +4,10 @@ import requests
 import serial.tools.list_ports
 print("RS485")
 
-# try:
-#     ser = serial.Serial(port="COM4", baudrate=9600)
-# except:
-#     print("Can not open the port")
+try:
+     ser = serial.Serial(port="/dev/ttyUSB0", baudrate=9600)
+except:
+     print("Can not open the port")
 
 relay1_ON  = [0, 6, 0, 0, 0, 255, 200, 91]
 relay1_OFF = [0, 6, 0, 0, 0, 0, 136, 27]
