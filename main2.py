@@ -215,15 +215,16 @@ while True:
     counter = counter - 1
     if counter <= 0:
         counter = 10
-        # temp = random.randint(10, 20)
-        # client.publish('cambien1', temp)
-        # print('cambien1: ' + str(temp))
-        # humi = random.randint(50, 70)
-        # client.publish('cambien2', humi)
-        # print('cambien2: ' + str(humi))
-        # light = random.randint(100, 500)
-        # client.publish('cambien3', light)
-        # print('cambien3: ' + str(light))
+        temp = random.randint(10, 20)
+        client.publish('cambien1', temp)
+        print('cambien1: ' + str(temp))
+        humi = random.randint(50, 70)
+        client.publish('cambien2', humi)
+        print('cambien2: ' + str(humi))
+        light = random.randint(100, 500)
+        client.publish('cambien3', light)
+        print('cambien3: ' + str(light))
+         
         if device1ON:
              value = readTemperature()
              print('Temperature value: ' + str(value))
