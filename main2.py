@@ -92,7 +92,7 @@ import sys
 # Import Adafruit IO MQTT client.
 from Adafruit_IO import MQTTClient
 
-ADAFRUIT_IO_KEY = 'aio_pNhq60U31XmTlNPaMfv3wev1ZGse'
+ADAFRUIT_IO_KEY = 'aio_dMmx257Bnf7fFenPgsVGuqo9MNcN'
 ADAFRUIT_IO_USERNAME = 'lcngoan0607'
 
 # Set to the ID of the feed to subscribe to for updates.
