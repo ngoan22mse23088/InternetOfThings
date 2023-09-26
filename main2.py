@@ -32,15 +32,15 @@ def setDevice1(state):
     else:
         ser.write(relay1_OFF)
 
-while True:
-    setDevice1(True)
-    time.sleep(2)
-    setDevice1(False)
-    time.sleep(2)
-    setDevice2(True)
-    time.sleep(2)
-    setDevice2(False)
-    time.sleep(2)
+# while True:
+setDevice1(True)
+#     time.sleep(2)
+#     setDevice1(False)
+#     time.sleep(2)
+setDevice2(True)
+#     time.sleep(2)
+#     setDevice2(False)
+#     time.sleep(2)
 
 
 import sys
@@ -212,13 +212,13 @@ def modify_value(init_global_equation, x1, x2, x3):
 aio = Adafruit_IO.Client(AIO_USERNAME, AIO_KEY)
 counter = 10
 while True:
-     if device1ON:
-          value = readTemperature()
-          print('Temperature value: ' + str(value))
-          client.publish('cambien1', value)
-     if device2ON:
-          value = readMoisture()
-          print('Moisture value: ' + str(value))
-          client.publish('cambien2', value)
-          time.sleep(3)
-          pass
+     #if device1ON:
+     value = readTemperature()
+     print('Temperature value: ' + str(value))
+     client.publish('cambien1', value)
+     #if device2ON:
+     value = readMoisture()
+     print('Moisture value: ' + str(value))
+     client.publish('cambien2', value)
+     time.sleep(3)
+     pass
