@@ -220,5 +220,5 @@ while True:
           value = readMoisture()
           print('Moisture value: ' + str(value))
           client.publish('cambien2', value)
-    time.sleep(3)
+# time.sleep(3)
     pass
