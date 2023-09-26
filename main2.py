@@ -249,5 +249,5 @@ while True:
         # result = modify_value(value, x1, x2, x3)
         # print('result', result)
         # client.publish('cambien3', result)
-    time.sleep(1)
+    # time.sleep(1)
     pass
