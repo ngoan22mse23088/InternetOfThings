@@ -224,20 +224,21 @@ while True:
         # light = random.randint(100, 500)
         # client.publish('cambien3', light)
         # print('cambien3: ' + str(light))
-        # if device1ON:
-        # value = readTemperature()
-        # print('Temperature value: ' + str(value))
-        # client.publish('cambien1', value)
-        # if device2ON:
-        # value = readMoisture()
-        # print('Moisture value: ' + str(value))
-        # client.publish('cambien2', value)
-        x1 = random.randint(0, 10)
-        client.publish('cambien1', x1)
-        x2 = random.randint(0, 10)
-        client.publish('cambien2', x2)
-        x3 = random.randint(0, 10)
-        client.publish('cambien3', x3)
+        if device1ON:
+             value = readTemperature()
+             print('Temperature value: ' + str(value))
+             client.publish('cambien1', value)
+        if device2ON:
+             value = readMoisture()
+             print('Moisture value: ' + str(value))
+             client.publish('cambien2', value)
+         
+        # x1 = random.randint(0, 10)
+        # client.publish('cambien1', x1)
+        # x2 = random.randint(0, 10)
+        # client.publish('cambien2', x2)
+        # x3 = random.randint(0, 10)
+        # client.publish('cambien3', x3)
 
         # x1 = getx1()
         # x2 = getx2()
