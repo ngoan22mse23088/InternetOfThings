@@ -212,13 +212,13 @@ def modify_value(init_global_equation, x1, x2, x3):
 aio = Adafruit_IO.Client(AIO_USERNAME, AIO_KEY)
 counter = 10
 while True:
-     #if device1ON:
-     value = readTemperature()
-     print('Temperature value: ' + str(value))
-     client.publish('cambien1', value)
-     #if device2ON:
-     value = readMoisture()
-     print('Moisture value: ' + str(value))
-     client.publish('cambien2', value)
-     time.sleep(3)
+     if device1ON:
+          value = readTemperature()
+          print('Temperature value: ' + str(value))
+          client.publish('cambien1', value)
+     if device2ON:
+          value = readMoisture()
+          print('Moisture value: ' + str(value))
+          client.publish('cambien2', value)
+          time.sleep(3)
      pass
