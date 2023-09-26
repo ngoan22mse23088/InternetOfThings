@@ -49,11 +49,7 @@ from Adafruit_IO import MQTTClient
 import time
 import random
 print('Run...')
-# from Lab04 import facemark_detector
 
-# AIO_FEED_ID = ["nutnhan1", "nutnhan2"]
-# AIO_FEED_ID_1 = "nutnhan1"
-# AIO_FEED_ID_2 = "nutnhan2"
 AIO_1 = 'cambien1'
 AIO_2 = 'cambien2'
 AIO_3 = 'cambien3'
@@ -96,13 +92,7 @@ import sys
 # Import Adafruit IO MQTT client.
 from Adafruit_IO import MQTTClient
 
-# Set to your Adafruit IO key.
-# Remember, your key is a secret,
-# so make sure not to publish it when you publish this code!
 ADAFRUIT_IO_KEY = 'aio_gpux25qmPq6ucu8emFE1XXhd3Pqx'
-
-# Set to your Adafruit IO username.
-# (go to https://accounts.adafruit.com to find your username)
 ADAFRUIT_IO_USERNAME = 'lcngoan0607'
 
 # Set to the ID of the feed to subscribe to for updates.
@@ -110,10 +100,6 @@ x1 = x2 = x3 = 0
 
 # Define callback functions which will be called when certain events happen.
 def connected(client):
-    # Connected function will be called when the client is connected to Adafruit IO.
-    # This is a good place to subscribe to feed changes.  The client parameter
-    # passed to this function is the Adafruit IO MQTT client so you can make
-    # calls against it easily.
     print('Connected to Adafruit IO!  Listening for {0} changes...'.format(AIO_1))
     print('Connected to Adafruit IO!  Listening for {0} changes...'.format(AIO_2))
     # Subscribe to changes on a feed named DemoFeed.
@@ -135,9 +121,6 @@ def disconnected(client):
     sys.exit(1)
 
 def message(client, feed_id, payload):
-    # Message function will be called when a subscribed feed has a new value.
-    # The feed_id parameter identifies the feed, and the payload parameter has
-    # the new value.
     print('Feed {0} received new value: {1}'.format(feed_id, payload))
     print('Received: ' + payload)
     if feed_id == 'equation':
@@ -171,7 +154,6 @@ def init_global_equation():
     global_equation = data["last_value"]
     print("Get lastest value:", global_equation)
     return global_equation
-    # x1, x2, x3 = ''
 
 def getx1():
     headers = {}
