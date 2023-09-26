@@ -44,7 +44,6 @@ def setDevice1(state):
 
 
 import sys
-
 import Adafruit_IO
 from Adafruit_IO import MQTTClient
 import time
@@ -198,6 +197,13 @@ def getx3():
     data = x.json()
     x3 = data["last_value"]
     return int(x3)
+
+parser = argparse.ArgumentParser(description='Python script with user and password arguments')
+parser.add_argument('-key', required=True, help='password')
+args = parser.parse_args()
+
+# Access the arguments
+ADAFRUIT_IO_KEY = args.key
 
 # Create an MQTT client instance.
 client = MQTTClient(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
