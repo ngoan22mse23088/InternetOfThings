@@ -55,7 +55,7 @@ AIO_2 = 'cambien2'
 AIO_3 = 'cambien3'
 AIO_FEED_ID_3 = "equation"
 AIO_USERNAME = "lcngoan0607"
-AIO_KEY = "aio_gpux25qmPq6ucu8emFE1XXhd3Pqx"
+AIO_KEY = "aio_pNhq60U31XmTlNPaMfv3wev1ZGse"
 
 def serial_read_data(ser):
     bytesToRead = ser.inWaiting()
