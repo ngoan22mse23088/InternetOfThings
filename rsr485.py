@@ -134,15 +134,11 @@ while True:
         value = readTemperature()
         print('Temperature value: ' + str(value))
         client.publish('cambien1', value)
-    else: 
-        print('Temperature value: ' + str(value))
 
     if device2ON:
           value = readMoisture()
           print('Moisture value: ' + str(value))
           client.publish('cambien2', value)
-    else: 
-        print('Moisture value: ' + str(value))
 
     time.sleep(3)
     pass
